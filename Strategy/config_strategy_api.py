@@ -13,7 +13,7 @@ kline_limit = 200
 z_score_window = 21
 prices_json_file_name = "1_prices_list.json"
 cointegrated_pairs_file_name = "2_cointegrated_pairs.csv"
-backtest_file_name = "3_backtest_file.csv"
+# backtest_pair = "3_backtest_file.csv"
 
 # Live API
 api_key_mainnet = ""
@@ -32,6 +32,9 @@ api_url = "https://api-testnet.bybit.com" if mode == "test" else "https://api.by
 
 # Session activation
 session = usdt_perpetual.HTTP(api_url)
+
+# Number of pairs for preparing backtest files
+number_of_backtest_pair = 100
 
 # # Web socket connection
 # usdt_perpetual.WebSocket

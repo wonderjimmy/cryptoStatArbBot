@@ -2,6 +2,7 @@ from config_strategy_api import session
 
 # get symbols that are tradable
 
+
 def get_tradable_symbols():
     sym_list = []
     symbols = session.query_symbol()
