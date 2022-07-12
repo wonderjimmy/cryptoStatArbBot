@@ -22,13 +22,14 @@ if __name__ == "__main__":
     if len(sym_response) > 0:
         store_price_history(sym_response)
 
+    """
     # step 3 - find cointegrated pairs    
     print("Calculating co-integration...")
     with open(prices_json_file_name) as json_file:
         price_data = json.load(json_file)
         if len(price_data) > 0:
             cointegrated_pairs = get_cointegrated_pairs(price_data)
-    """
+
     # step 4 - create the first 10 pairs of backtest files
     print("Prepare the backtest files for the first 10 pairs of coins...")
     coint_pairs_df = pd.read_csv(cointegrated_pairs_file_name)

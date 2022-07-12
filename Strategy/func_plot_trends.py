@@ -66,12 +66,11 @@ def is_skipped(pair_data):
         print("spread sign does not changed, the pair is skipped")
         return True
 
-    if not (len(df_zscore_positive)/len(df_zscore_negative) > 0.3 or len(df_zscore_negative)/len(df_zscore_positive) > 0.3):
-        print("zscore reversal count is not balanced bewteen positive and negative, the pair is skipped")
+    """
+    if len(df_zscore_positive)/len(df_zscore_negative) > 0.1 or len(df_zscore_negative)/len(df_zscore_positive) > 0.1:
+        print("zscore reversal count is not balanced between positive and negative, the pair is skipped")
         return True
-
-
-
+    """
     return False
 
 

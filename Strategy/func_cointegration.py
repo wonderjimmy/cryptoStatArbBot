@@ -89,6 +89,7 @@ def get_cointegrated_pairs(prices):
 
     # output results
     df_coint = pd.DataFrame(coint_pair_list)
-    df_coint = df_coint.sort_values("zero_crossing", ascending=False)
+    #df_coint = df_coint.sort_values("zero_crossing", ascending=False)
+    df_coint = df_coint.sort_values("p_value", ascending=True)
     df_coint.to_csv(cointegrated_pairs_file_name)
     return df_coint

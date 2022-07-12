@@ -34,7 +34,7 @@ api_url = "https://api-testnet.bybit.com" if mode == "test" else "https://api.by
 session = usdt_perpetual.HTTP(api_url)
 
 # Number of pairs for preparing backtest files
-number_of_backtest_pair = 100
+number_of_backtest_pair = 30
 
 # # Web socket connection
 # usdt_perpetual.WebSocket
